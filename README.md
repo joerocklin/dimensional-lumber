@@ -8,6 +8,8 @@ You can build the binary with `go build` or you can just run it with `go run boa
 
 Some [examples](./examples/) are provided.
 
+The prices per board are just the prices from my local home depot the day I did a project.
+
 ## Why?
 
 It's a good question. I like OpenSCAD and I found myself wanting to design various projects that used dimensional lumber. Once I had a simple design, the logical extension was to figure out what I needed to buy and what cuts I needed to make.

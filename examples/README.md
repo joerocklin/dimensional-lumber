@@ -19,6 +19,7 @@ Example output:
 2x4x33.75 - 2
 
 ---------- Board Buy ----------
+Boards needed for complete project in each size - mix and match if you like
 --- 8 foot boards ---
 2x4x8 - 16 ($124.00)
 2x6x8 - 2 ($27.10)

@@ -13,13 +13,12 @@ import (
 )
 
 var boardCosts = map[string]float64{
-	"2x4x8": 7.75,
+	"2x4x8":  7.75,
 	"2x4x10": 12.98,
 	"2x4x12": 14.53,
 	"2x4x16": 21.22,
 
-
-	"2x6x8": 13.55,
+	"2x6x8":  13.55,
 	"2x6x10": 19.45,
 	"2x6x12": 21.57,
 	"2x6x16": 29.34,
@@ -47,7 +46,7 @@ func main() {
 		fmt.Printf("Usage: %s [options] <input file>\n\n", os.Args[0])
 		os.Exit(1)
 	}
-	
+
 	infile := os.Args[len(os.Args)-1]
 
 	cmd := exec.Command(openscadBin, "--export-format=3mf", "-o", "/dev/null", infile)
@@ -102,7 +101,8 @@ func main() {
 	fmt.Println("")
 
 	fmt.Println("---------- Board Buy ----------")
-	for _, len := range []int{8,10,12,16} {
+	fmt.Println("Boards needed for complete project in each size - mix and match if you like")
+	for _, len := range []int{8, 10, 12, 16} {
 		fmt.Printf("--- %d foot boards ---\n", len)
 		PrintBoardCounts(len, boards)
 		fmt.Println("")
@@ -128,7 +128,7 @@ func PrintBoardCounts(maxLenFt int, boards []Board) {
 	for _, k := range keys {
 		bId := fmt.Sprintf("%sx%d", k, maxLenFt)
 		fmt.Printf("%s - %d ($%0.2f)\n", bId, boardCounts[k], boardCosts[bId]*float64(boardCounts[k]))
-		total += boardCosts[bId]*float64(boardCounts[k])
+		total += boardCosts[bId] * float64(boardCounts[k])
 	}
 
 	fmt.Printf("Total: $%0.2f\n", total)
