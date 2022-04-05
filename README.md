@@ -4,11 +4,18 @@ This repo has some tools that I've pulled together to help do some design and pl
 
 ## Usage
 
-You can build the binary with `go build` or you can just run it with `go run board-calculations.go <openscad file>`. If your openscad binary is not in the path (as is the case on MacOS) you can specify the binary to use with the `-openscad-bin` flag.
+You can download the binary from the releases or build it with `go build`. The run `dimensional-lumber <openscad file>`. You can also just run it with `go run board-calculations.go <openscad file>`. If your openscad binary is not in the path (as is the case on MacOS) you can specify the binary to use with the `-openscad-bin` flag.
 
 Some [examples](./examples/) are provided.
 
 The prices per board are just the prices from my local home depot the day I did a project.
+
+## Prerequisites
+
+There are some minimal prerequisites for working with this:
+
+1. [BOSL2](https://github.com/revarbat/BOSL2) - I find the tooling here super handy. Follow [their installation instructions](https://github.com/revarbat/BOSL2#installation)
+2. If you want to build the code: [go](https://go.dev). I like go, I always have it available, so it works for me. If you don't have this you can just download from the [releases](https://github.com/joerocklin/dimensional-lumber/releases).
 
 ## Why?
 
